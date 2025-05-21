@@ -38,6 +38,25 @@ JavaScript is amazing
 
 ---
 
+## 📄 Sample Script: `1-multi_languages.js`
+
+**Task:** Write a script that prints 3 lines:
+
+```javascript
+console.log("C is fun");
+console.log("Python is cool");
+console.log("JavaScript is amazing");
+```
+
+**Output:**
+```
+C is fun
+Python is cool
+JavaScript is amazing
+```
+
+---
+
 ## 🚀 Getting Started
 
 To run the scripts in this repository:
@@ -52,7 +71,7 @@ node filename.js
 
 Example:
 ```bash
-node 0-javascript_is_amazing.js
+node 1-multi_languages.js
 ```
 
 ---
