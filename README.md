@@ -123,6 +123,44 @@ undefined is undefined
 
 ---
 
+## 📄 Sample Script: `5-to_integer.js`
+
+**Task:** Write a script that prints "My number: <first argument converted to integer>" if it can be converted. Otherwise, print "Not a number".
+
+```javascript
+let number = process.argv[2];
+
+number = parseInt(number);
+
+if (number) {
+    console.log("My number:", number);
+} else {
+    console.log("Not a number");
+}
+```
+
+**Example Outputs:**
+```
+$ node 5-to_integer.js
+Not a number
+
+$ node 5-to_integer.js 89
+My number: 89
+
+$ node 5-to_integer.js "89"
+My number: 89
+
+$ node 5-to_integer.js School
+Not a number
+```
+
+**Lesson Learned:**
+- How to convert command line arguments to integers using `parseInt`
+- Practiced basic input checking in JavaScript
+- Reinforced using conditionals to control script behavior
+
+---
+
 ## 🚀 Getting Started
 
 To run the scripts in this repository:
