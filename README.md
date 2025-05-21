@@ -14,12 +14,14 @@ This project is part of my journey into JavaScript programming. I created it to 
 
 Throughout this project, I learned:
 
-- How to declare and use `const`, `let`, and `if-else` statements
-- How to write and run JavaScript scripts using Node.js
-- How loops (`for`) work and how to use them to iterate over values
-- How to use `process.argv` to access command-line arguments
-- The importance of writing clean and readable code
-- How to use `console.log()` for output and debugging
+* How to declare and use `const`, `let`, and `if-else` statements
+* How to write and run JavaScript scripts using Node.js
+* How loops (`for`) work and how to use them to iterate over values
+* The importance of writing clean and readable code
+* How to use `console.log()` for output and debugging
+* How to handle command line arguments using `process.argv`
+* How to check argument count and values to control output
+* How to concatenate arguments and form sentences dynamically
 
 ---
 
@@ -33,6 +35,7 @@ console.log(myVar);
 ```
 
 **Output:**
+
 ```
 JavaScript is amazing
 ```
@@ -50,6 +53,7 @@ console.log("JavaScript is amazing");
 ```
 
 **Output:**
+
 ```
 C is fun
 Python is cool
@@ -60,52 +64,61 @@ JavaScript is amazing
 
 ## 📄 Sample Script: `2-arguments.js`
 
-**Task:** Write a script that checks how many arguments are passed:
+**Task:** Print a message depending on the number of arguments passed:
 
 ```javascript
 const argvCount = process.argv.length - 2;
 
-if (argvCount === 0) {
+if(argvCount === 0){
     console.log("No argument");
-} else if (argvCount === 1) {
+} else if(argvCount === 1){
     console.log("Argument found");
 } else {
     console.log("Arguments found");
 }
 ```
 
-**Output Example:**
-```bash
-$ node 2-arguments.js 
-No argument
-$ node 2-arguments.js Hello
-Argument found
-$ node 2-arguments.js Hello World
-Arguments found
-```
-
 ---
 
 ## 📄 Sample Script: `3-value_argument.js`
 
-**Task:** Write a script that prints the first argument passed to it. If no arguments are passed, print “No argument”.
+**Task:** Print the first argument passed, or “No argument” if none:
 
 ```javascript
 const argv = process.argv[2];
 
-if (argv) {
+if(argv){
     console.log(`${argv}`);
 } else {
     console.log("No argument");
 }
 ```
 
-**Output Example:**
-```bash
-$ node 3-value_argument.js 
-No argument
-$ node 3-value_argument.js School
-School
+---
+
+## 📄 Sample Script: `4-concat.js`
+
+**Task:** Print two arguments passed in the format "<arg1> is <arg2>":
+
+```javascript
+const program = process.argv[2];
+const adverb = process.argv[3];
+
+const fullSentence = `${program} is ${adverb}`;
+console.log(fullSentence);
+```
+
+**Examples:**
+
+```
+$ node 4-concat.js c cool
+c is cool
+
+$ node 4-concat.js c
+c is undefined
+
+$ node 4-concat.js
+undefined is undefined
 ```
 
 ---
@@ -123,6 +136,7 @@ node filename.js
 ```
 
 Example:
+
 ```bash
 node 1-multi_languages.js
 ```
