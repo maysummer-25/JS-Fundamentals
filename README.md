@@ -161,6 +161,35 @@ Not a number
 
 ---
 
+## 📄 Sample Script: `6-multi_languages_loop.js`
+
+**Task:** Write a script that prints 3 lines using an array and a loop:
+
+- “C is fun”
+- “Python is cool”
+- “JavaScript is amazing”
+
+**Constraints:**
+- Must use a loop (like `for` or `while`)
+- Must use only one `console.log` per line
+- Cannot use `var` or `if/else`
+
+```javascript
+const sentence = ["C is fun", "Python is cool", "JavaScript is amazing"];
+
+for (let i = 0; i < sentence.length; i++) {
+  console.log(sentence[i]);
+}
+
+**Example Outputs:**
+```
+$ node 6-multi_languages_loop.js 
+C is fun
+Python is cool
+JavaScript is amazing
+
+
+
 ## 🚀 Getting Started
 
 To run the scripts in this repository:
