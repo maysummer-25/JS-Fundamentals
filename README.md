@@ -188,7 +188,45 @@ C is fun
 Python is cool
 JavaScript is amazing
 
+---
 
+## 📄 Sample Script: `7-multi_c.js`
+
+**Task:** Write a script that prints x times “C is fun”
+
+**Rules:**
+- The first argument passed to the script determines how many times to print.
+- If it can’t be converted to an integer, print “Missing number of occurrences”.
+- Use a loop (e.g., `while` or `for`).
+- Only two `console.log()` allowed.
+- No `var`.
+
+```javascript
+const test = parseInt(process.argv[2]);
+
+if (!isNaN(test)) {
+  let i = 0;
+  while (i < test) {
+    console.log("C is fun");
+    i++;
+  }
+} else {
+  console.log("Missing number of occurrences");
+}
+```
+
+**Example:**
+```
+$ node 7-multi_c.js 3
+C is fun
+C is fun
+C is fun
+
+$ node 7-multi_c.js
+Missing number of occurrences
+```
+
+---
 
 ## 🚀 Getting Started
 
