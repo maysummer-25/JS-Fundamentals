@@ -228,6 +228,53 @@ Missing number of occurrences
 
 ---
 
+## 📄 Sample Script: `8-square.js`
+
+**Task:** Write a script that prints a square of size `x`, using the character `X`
+
+**Constraints:**
+- The first argument is the size of the square
+- If it’s not a number, print: `Missing size`
+- Must use only one character per cell: `X`
+- Use a loop (`for`, `while`, etc.)
+- Use only two `console.log` statements
+- Do **not** use `var`
+
+```javascript
+const args = parseInt(process.argv[2]);
+
+if (!isNaN(args)) {
+    for (let i = 0; i < args; i++) {
+        console.log("X".repeat(args));
+    }
+} else {
+    console.log("Missing size");
+}
+```
+
+### 🔍 Example
+```bash
+$ node 8-square.js
+Missing size
+
+$ node 8-square.js School
+Missing size
+
+$ node 8-square.js 2
+XX
+XX
+
+$ node 8-square.js 6
+XXXXXX
+XXXXXX
+XXXXXX
+XXXXXX
+XXXXXX
+XXXXXX
+```
+
+---
+
 ## 🚀 Getting Started
 
 To run the scripts in this repository:
