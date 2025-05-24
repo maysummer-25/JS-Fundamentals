@@ -275,6 +275,51 @@ XXXXXX
 
 ---
 
+## 📄 Sample Script: `9-add.js`
+
+This script prints the addition of 2 integers.
+
+### Description:
+- The first argument is the first integer.
+- The second argument is the second integer.
+- It defines a function `add(a, b)` that returns the result of `a + b`.
+- It converts both arguments to numbers before passing them to the function.
+- If one or both arguments are missing or cannot be converted to a number, the result will be `NaN`.
+
+#### Script:
+```javascript
+
+function add(a, b) {
+  return a + b;
+}
+
+const argument = process.argv;
+
+const calc = add(Number(argument[2]), Number(argument[3]));
+console.log(calc);
+```
+
+#### Usage:
+```bash
+$ node 9-add.js <number1> <number2>
+```
+
+#### Example:
+```bash
+$ node 9-add.js
+NaN
+
+$ node 9-add.js 1
+NaN
+
+$ node 9-add.js 1 7
+8
+
+$ node 9-add.js 13 89
+102
+```
+---
+
 ## 🚀 Getting Started
 
 To run the scripts in this repository:
