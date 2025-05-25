@@ -320,6 +320,49 @@ $ node 9-add.js 13 89
 ```
 ---
 
+## 📄 Sample Script: `10-factorial.js`
+
+**Task:** Write a script that computes and prints a factorial.
+
+**Requirements:**
+- The script should receive the first argument from the command line.
+- If no argument is passed or it's not a number, treat it as 0.
+- Factorial of 0 is 1.
+- Must define a function with this prototype: `function factorial(n)`
+- Use `console.log(...)` to print all output
+- Do not use `var`
+
+```javascript
+
+function factorial(n) {
+    if (n === 0) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+const argument = Number(process.argv[2]);
+
+const number = isNaN(argument) ? 0 : argument;
+
+const result = factorial(number);
+console.log(result);
+```
+
+**Examples:**
+```bash
+$ node 10-factorial.js 2
+2
+
+$ node 10-factorial.js 5
+120
+
+$ node 10-factorial.js
+1
+```
+
+---
+
 ## 🚀 Getting Started
 
 To run the scripts in this repository:
